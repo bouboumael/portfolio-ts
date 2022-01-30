@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'variables.scss';
+
+* {
+	font-family: $font-text;
+	font-size: $text-size;
+	color: $dark-color;
+}
+
+h1 {
+	font-family: $font-title;
+	font-size: $title-size;
+	color: $primary-color;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-subtitle;
+}
+
+p {
+	font-family: $font-text;
+}
+
+
+.background-filter::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	backdrop-filter: blur(5px);
+}
+

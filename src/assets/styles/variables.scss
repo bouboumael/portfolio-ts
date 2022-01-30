@@ -1,0 +1,29 @@
+@font-face {
+	font-family: Noto;
+	src: url("../fonts/NotoSerif-Regular.ttf");
+}
+
+@font-face {
+	font-family: Fira;
+	src: url("../fonts/FiraSans-Regular.ttf");
+}
+
+@font-face {
+	font-family: Nobile;
+	src: url("../fonts/Nobile-Regular.ttf");
+}
+
+$font-title: Noto, serif;
+$font-subtitle: Fira;
+$font-text: Nobile;
+
+$primary-color: #030911;
+$secondary-color: #081c33;
+$light-color: #dde1ff;
+$white-color: #efeff8;
+$dark-color: #000000;
+
+$title-size: 3.5rem;
+$subtitle-size: 2.5rem;
+$text-size: 1.5rem;
+

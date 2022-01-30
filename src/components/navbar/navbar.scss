@@ -1,0 +1,117 @@
+@import "../../assets/styles/variables.scss";
+
+.navbar{
+	width: 100%;
+	min-height: 10vh;
+	position: fixed;
+	
+	#menu {
+		$ray:  140px;
+		width: $ray;
+		height: $ray;
+		position: absolute;
+		left: 2%;
+		top: 50%;
+		margin: -75px 0 0 -75px;
+		list-style: none;
+		font-size: 200%;
+		
+		.menu-button {
+			$ray: 200px;
+			width: $ray;
+			height: $ray;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin: -75px 0 0 -75px;
+			border-radius: 50%;
+			background-image: url("../../assets/images/mael.webp");
+			background-size: cover;
+			overflow: hidden;
+			text-decoration: none;
+			opacity: 0;
+			z-index: -1;
+			box-shadow: 1px 1px 6px 1px $dark-color;
+			
+			&:active {
+				box-shadow: none;
+			}
+		}
+		
+		.menu-item {
+			$ray: 60px;
+			width: $ray;
+			height: $ray;
+			position: relative;
+			left: 80%;
+			line-height: 5px;
+			top: 80%;
+			margin: -50px 0 0 -50px;
+			border-radius: 50%;
+			box-shadow: 1px 1px 6px 1px $dark-color;
+			background-color: $white-color;
+			transform: translate(0px, 0px);
+			transition: transform 500ms;
+			
+			&:hover{
+				background-color: $primary-color;
+				
+				span {
+					color: $white-color;
+				}
+			}
+			
+			a {
+				position: relative;
+				left: 22%;
+				top: 20%;
+				text-decoration: none;
+				
+				span {
+					color: $dark-color;
+				}
+			}
+		}
+		
+		&:not(:target)>a:first-of-type,
+		&:target>a:last-of-type {
+			opacity: 1;
+			z-index: 1;
+		}
+		
+		&:not(:target)>.icon-plus:before,
+		&:target>.icon-minus:before {
+			opacity: 1;
+		}
+		
+		$position: 80deg;
+		
+		&:target>.menu-item:nth-child(5) {
+			transform: rotate($position) translateY(-155px) rotate(-$position);
+			transition-delay: 0.1s;
+			
+			a {
+				left: 18%;
+			}
+		}
+		
+		&:target>.menu-item:nth-child(3) {
+			transform: rotate($position * 1.5) translateY(-155px) rotate(-$position * 1.5);
+			transition-delay: 0.2s;
+			
+			a {
+				left: 21.5%;
+			}
+		}
+		
+		&:target>.menu-item:nth-child(4) {
+			transform: rotate($position * 1.95) translateY(-140px) rotate(-$position * 1.95);
+			transition-delay: 0.3s;
+			
+			a {
+				left: 20%;
+			}
+		}
+	}
+}
+
