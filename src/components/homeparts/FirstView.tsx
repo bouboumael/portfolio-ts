@@ -10,4 +10,5 @@ function FirstView() {
     );
 }
 
+// @ts-ignore
 export default FirstView;
