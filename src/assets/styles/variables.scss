@@ -17,13 +17,13 @@ $font-title: Noto, serif;
 $font-subtitle: Fira;
 $font-text: Nobile;
 
-$primary-color: #030911;
+$primary-color: #1b1b1b;
 $secondary-color: #081c33;
 $light-color: #dde1ff;
 $white-color: #efeff8;
-$dark-color: #000000;
+$dark-color: #101010;
 
-$title-size: 3.5rem;
-$subtitle-size: 2.5rem;
-$text-size: 1.5rem;
+$title-size: 2.8rem;
+$subtitle-size: $title-size - 1rem;
+$text-size: $subtitle-size - .8rem;
 
