@@ -9,6 +9,10 @@
 	color: $dark-color;
 }
 
+body {
+	background-color: $dark-color;
+}
+
 h1 {
 	font-family: $font-title;
 	font-size: $title-size;
@@ -22,15 +26,13 @@ h4,
 h5,
 h6 {
 	font-family: $font-subtitle;
-}
-
-h2 {
 	font-size: $subtitle-size;
-	color: $primary-color;
+	color: $light-color;
 }
 
 p {
 	font-family: $font-text;
+	color: $light-color;
 }
 
 .background-filter::before {

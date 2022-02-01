@@ -2,7 +2,6 @@
 
 .homepage {
 	.firstview {
-		background-color: $primary-color;
 		
 		height: 100vh;
 		
@@ -15,19 +14,14 @@
 		}
 	}
 	
-	.rotating {
-		animation-name: spin;
-		animation-duration: 30s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-	}
-	
-	@keyframes spin {
-		from {
-			transform:rotate(0deg);
+	.secondView {
+		min-height: 100vh;
+		
+		.card-description {
+			background-color: $primary-color;
+			min-height: 48vh;
+			
 		}
-		to {
-			transform:rotate(360deg);
-		}
+		
 	}
 }
