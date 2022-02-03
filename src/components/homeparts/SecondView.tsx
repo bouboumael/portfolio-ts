@@ -7,7 +7,7 @@ const SecondView = () => {
     const text: string = '<p class=\"mb-2\">Avant toutes choses laissez moi me présenter.</p>\n' +
         '                    <p class=\"mb-2\">Je suis passionné de nouvelles technologies. Je suis comme de nombreuses personnes le bidouilleur familiale. La personne que l\'on contact quand on à un soucis sur son pc.</p>\n' +
         '                    <p class=\"mb-2\"> Adepte des formations autodidacts, j\'ai su me débrouiller et apprendre au fur et à mesure du temps. </p>\n' +
-        '                    <p class=\"mb-2\"> Je me suis pris du développement de part mes expériences personnelles et professionnelles. </p>\n' +
+        '                    <p class=\"mb-2\"> Je me suis pris de développement de part mes expériences personnelles et professionnelles. </p>\n' +
         '                    <p class=\"mb-2\"> Mais trève de bavardage, prenez le temps de regarder mon parcours.</p>'
 
     const [typewriter, setTypewriter] = useState<boolean>(false);
@@ -38,7 +38,7 @@ const SecondView = () => {
                                         .start();
                                 }}
                                 options={{
-                                    delay: 40,
+                                    delay: 0,
                                     cursor: '',
                                 }}
                             />
