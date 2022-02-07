@@ -18,7 +18,7 @@ const ThirdView = () => {
                 src: "logos/css.png",
                 alt: "CSS Logo",
             },
-            starNumber: 5,
+            starNumber: 4,
             link: "https://developer.mozilla.org/fr/docs/Web/CSS",
         },
         {
@@ -36,6 +36,22 @@ const ThirdView = () => {
             },
             starNumber: 5,
             link: "https://www.php.net/",
+        },
+        {
+            logo: {
+                src: "logos/Bootstrap.svg",
+                alt: "logo Bootstrap",
+            },
+            starNumber: 5,
+            link: "https://getbootstrap.com/",
+        },
+        {
+            logo: {
+                src: "logos/Tailwind.png",
+                alt: "logo Tailwind",
+            },
+            starNumber: 4,
+            link: "https://tailwindcss.com/",
         },
         {
             logo: {
