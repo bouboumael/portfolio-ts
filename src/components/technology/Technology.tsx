@@ -21,13 +21,13 @@ const stars = (starNumber: number) => {
 
 const Technology = (props: TechnologyProps) => {
 
-    const {name, link, logo, starNumber} = props;
+    const {title, link, logo, starNumber} = props;
 
     return (
         <>
-            <a className={"flex justify-center basis-1/3 h-32 mb-5"} href={link} target={'_blank'}>
+            <a className={"flex justify-center basis-1/4 h-32 mb-5"} href={link} target={'_blank'}>
                 <div
-                    className="technology flex items-center justify-center px-20 rounded bg-amber-50/5 shadow-md shadow-blue-200">
+                    className="technology flex items-center justify-center px-20 rounded bg-amber-50/5 shadow-md shadow-blue-200" title={title}>
                     <img src={imageUrl(logo.src)} alt={logo.alt}/>
                     <div className="star-number flex ml-5">
                         {

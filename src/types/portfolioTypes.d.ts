@@ -6,6 +6,6 @@ export type TechnologyProps = {
         alt: string;
     },
     starNumber: number,
-    name?: string,
+    title?: string,
     link?: string
 };

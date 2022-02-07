@@ -12,6 +12,7 @@ const ThirdView = () => {
             },
             starNumber: 5,
             link: "https://developer.mozilla.org/fr/docs/Web/HTML",
+            title:  'Html 5'
         },
         {
             logo: {
@@ -20,6 +21,7 @@ const ThirdView = () => {
             },
             starNumber: 4,
             link: "https://developer.mozilla.org/fr/docs/Web/CSS",
+            title:  'Css 3'
         },
         {
             logo: {
@@ -28,6 +30,7 @@ const ThirdView = () => {
             },
             starNumber: 4,
             link: "https://developer.mozilla.org/fr/docs/Web/JavaScript",
+            title:  'JavaScript'
         },
         {
             logo: {
@@ -36,6 +39,7 @@ const ThirdView = () => {
             },
             starNumber: 5,
             link: "https://www.php.net/",
+            title:  'Php'
         },
         {
             logo: {
@@ -44,6 +48,7 @@ const ThirdView = () => {
             },
             starNumber: 5,
             link: "https://getbootstrap.com/",
+            title:  'Bootstrap'
         },
         {
             logo: {
@@ -52,6 +57,7 @@ const ThirdView = () => {
             },
             starNumber: 4,
             link: "https://tailwindcss.com/",
+            title:  'Tailwind'
         },
         {
             logo: {
@@ -60,6 +66,7 @@ const ThirdView = () => {
             },
             starNumber: 5,
             link: "https://symfony.com/",
+            title:  'Symfony'
         },
         {
             logo: {
@@ -68,6 +75,7 @@ const ThirdView = () => {
             },
             starNumber: 5,
             link: "https://www.mysql.com/fr/",
+            title:  'MySql'
         },
         {
             logo: {
@@ -76,6 +84,7 @@ const ThirdView = () => {
             },
             starNumber: 4,
             link: "https://fr.reactjs.org/",
+            title:  'React JS'
         },
         {
             logo: {
@@ -84,6 +93,7 @@ const ThirdView = () => {
             },
             starNumber: 4,
             link: "https://www.gatsbyjs.com/",
+            title:  'Gatsby JS'
         },
         {
             logo: {
@@ -92,6 +102,7 @@ const ThirdView = () => {
             },
             starNumber: 4,
             link: "https://developer.wordpress.org/",
+            title:  'Wordpress'
         },
         {
             logo: {
@@ -100,6 +111,7 @@ const ThirdView = () => {
             },
             starNumber: 5,
             link: "https://git-scm.com/",
+            title:  'Git'
         },
         {
             logo: {
@@ -108,6 +120,7 @@ const ThirdView = () => {
             },
             starNumber: 4,
             link: "https://www.ubuntu-fr.org/",
+            title:  'Linux'
         },
         {
             logo: {
@@ -116,6 +129,7 @@ const ThirdView = () => {
             },
             starNumber: 5,
             link: "https://www.microsoft.com/fr-fr/windows?r=1",
+            title:  'Windows'
         },
         {
             logo: {
@@ -124,6 +138,7 @@ const ThirdView = () => {
             },
             starNumber: 4,
             link: "https://www.office.com/",
+            title:  'Office 365'
         },
         {
             logo: {
@@ -132,6 +147,7 @@ const ThirdView = () => {
             },
             starNumber: 5,
             link: "https://www.jetbrains.com/fr-fr/phpstorm/",
+            title:  'PhpStorm'
         },
         {
             logo: {
@@ -140,6 +156,7 @@ const ThirdView = () => {
             },
             starNumber: 5,
             link: "https://www.jetbrains.com/fr-fr/webstorm/",
+            title:  'Webstorm'
         },
         {
             logo: {
@@ -148,6 +165,16 @@ const ThirdView = () => {
             },
             starNumber: 5,
             link: "https://code.visualstudio.com/",
+            title:  'VsCode'
+        },
+        {
+            logo: {
+                src: "logos/docker.png",
+                alt: "logo Docker",
+            },
+            starNumber: 3,
+            link: "https://www.docker.com/",
+            title:  'Docker'
         },
 
     ]
