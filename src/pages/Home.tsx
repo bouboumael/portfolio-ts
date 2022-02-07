@@ -18,15 +18,21 @@ function Home() {
                 <title>Maël Chariault</title>
             </Helmet>
             <Layout>
-                <FirstView/>
-                <Transition image={'t1.webp'} title={title} text={description}/>
-                <div className="mb-20">
-                    <SecondView/>
-                </div>
-                <Transition image={'t2.webp'} title={'Mes Compétences'} text={"Les technologies que je connais."}/>
-                <div className="mb-20">
-                    <ThirdView/>
-                </div>
+                <section>
+                    <FirstView/>
+                </section>
+                <section>
+                    <Transition image={'t1.webp'} title={title} text={description}/>
+                    <div className="mb-20">
+                        <SecondView/>
+                    </div>
+                </section>
+                <section>
+                    <Transition image={'t2.webp'} title={'Mes Compétences'} text={"Les technologies que je connais."}/>
+                    <div className="mb-20">
+                        <ThirdView/>
+                    </div>
+                </section>
             </Layout>
         </div>
     );
