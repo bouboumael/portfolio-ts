@@ -29,7 +29,7 @@ function Home() {
                     </div>
                 </section>
                 <section id={'competences'}>
-                    <Transition image={'t2.webp'} title={'Mes Compétences'} text={"Les technologies que je connais."}/>
+                    <Transition image={'t2.webp'} title={'Hard skills'} text={"Les technologies que je connais."}/>
                     <div className="mb-20">
                         <ThirdView/>
                     </div>

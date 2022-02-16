@@ -210,7 +210,6 @@ $bow-color: darken($ribbon-color, 10);
 		@include traverse($steps);
 		@extend %center;
 		height: 200px;
-		width: $form-width + px;
 		
 		@for $i from 1 through $steps {
 			&__step:nth-of-type(#{$i}) {
@@ -239,10 +238,12 @@ $bow-color: darken($ribbon-color, 10);
 		
 		&__tabs {
 			& .tab {
-				width: 100%;
 				opacity: 0;
 				position: absolute;
-				top: 40px;
+				left: 0;
+				right: 0;
+				margin-left: auto;
+				margin-right: auto;
 				text-align: center;
 				margin-top: $tab-spacing;
 				box-shadow: 0 2px 1px darken($color-bg, 10);

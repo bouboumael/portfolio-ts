@@ -1,7 +1,7 @@
 @import '../../assets/styles/variables';
 
 .footer-distributed {
-	background: #666;
+	background: $primary-color;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
@@ -50,7 +50,6 @@
 	}
 	
 	.footer-company-name{
-		color:  #222;
 		font-size: 14px;
 		font-weight: normal;
 	}
@@ -145,7 +144,6 @@
 			width: 35px;
 			height: 35px;
 			cursor: pointer;
-			background-color:  #33383b;
 			border-radius: 2px;
 			
 			font-size: 20px;
