@@ -37,7 +37,7 @@ const Timeline = () => {
                 <div className='progress_inner__tabs'>
                     {contents.map((content, index) => {
                         return (
-                            <div key={index} className={`tab tab-${index} xl:w-1/2`}>
+                            <div key={index} className={`tab tab-${index} md:w-2/3 xl:w-1/2`}>
                                 <h3>{content.title}</h3>
                                 <p>{content.content}</p>
                             </div>
