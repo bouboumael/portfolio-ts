@@ -19,24 +19,24 @@ function Home() {
                 <title>Maël Chariault</title>
             </Helmet>
             <Layout>
-                <section>
+                <section id={'home'}>
                     <FirstView/>
                 </section>
-                <section>
+                <section id={'parcours'}>
                     <Transition image={'t1.webp'} title={title} text={description}/>
                     <div className="mb-20">
                         <SecondView/>
                     </div>
                 </section>
-                <section>
+                <section id={'competences'}>
                     <Transition image={'t2.webp'} title={'Mes Compétences'} text={"Les technologies que je connais."}/>
                     <div className="mb-20">
                         <ThirdView/>
                     </div>
                 </section>
-                <section>
+                <section id={'projets'}>
                     <Transition image={'t3.webp'} title={'Mes Projets'} text={"Projets professionnels ou Personnels"}/>
-                    <div className="mb-20">
+                    <div>
                         <FourthView />
                     </div>
                 </section>

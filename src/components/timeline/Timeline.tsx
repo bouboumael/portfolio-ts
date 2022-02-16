@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import './timeline.scss'
+import {timelineContent} from "../../datas/timeline";
+import {TimelineContent} from "../../types/portfolioTypes";
 
 const Timeline = () => {
 
@@ -10,47 +12,7 @@ const Timeline = () => {
         }
     }
 
-    type Content = {
-        label: string,
-        title: string,
-        content: string
-    }
-
-    const contents: Content[] = [
-        {
-            label: '1998 - 2000',
-            title: 'Bepa sylviculture et travaux forestiers',
-            content: 'Formation à la MFR de Gien.'
-        },
-        {
-            label: '2000 - 2002',
-            title: 'BTA Gestion et conduite de chantiers forestiers',
-            content: 'Formation au Cfaad de Bellegarde.'
-        },
-        {
-            label: '2002 - Aujourd\'hui',
-            title: 'Chef d\'équipe Moypark Beef Orléans (ex Mckey Foods Services)',
-            content: "Chef d'équipe de production.\n" +
-                "\n" +
-                "J'ai sous ma responsabilité une équipe d'une dizaine de personnes.\n" +
-                "\n" +
-                "Travaillant essentiellement de nuit, je suis autonome et force de propositions. Je m'efforce d'obtenir les objectifs demandés en adaptant le travail en fonction des imprévus.\n" +
-                "\n" +
-                "J'ai participé à la création d'outils informatiques pour le suivis des résultats et de la production.\n" +
-                "\n" +
-                "J'ai également participé au débogage et à la mise en production d'une interface reliant SAP à cette dernière."
-        },
-        {
-            label: '2018 - 2021',
-            title: 'Reconversion Développeur Web & Web Mobile',
-            content: "Afin de me lancer dans le développement, je commence à suivre des cours sur OpenClassrooms puis suit les formations de Grafikart. Suite logique dans ma démarche personnelle, je me lance dans une reconversion professionelle à la Wild Code School d'Orléans afin de concrétiser mes années d'auto-formation. Je finalise ma formation en réalisant un stage chez Puddinglab."
-        },
-        {
-            label: 'Aujourd\'hui',
-            title: 'Recherche expérience dans le développement web',
-            content: "Actuellement en recherche d'expérience je refléchis aux possibilités qui me sont offertes (freelance, CDD, CDI)"
-        },
-    ]
+    const contents: TimelineContent[] = timelineContent
 
     return (
         <div className='progress mt-40'>

@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../footer/Footer";
 
 const Layout: React.FC<any> = ({children}) => {
     return (
@@ -6,6 +7,7 @@ const Layout: React.FC<any> = ({children}) => {
             <div className={'content'}>
                 {children}
             </div>
+            <Footer/>
         </div>
     );
 }

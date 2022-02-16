@@ -1,0 +1,43 @@
+@import '../../assets/styles/variables.scss';
+
+.modal-box {
+	$modalHeight: 100%;
+	$modalImageHeight: $modalHeight * 0.5;
+	$modalTitleHeight: $modalHeight * 0.04;
+	$modalTextHeight: $modalHeight * 0.35;
+	
+	background-color: $dark-color;
+	
+	.modal-box-image {
+		width: 100%;
+		height: $modalImageHeight;
+	}
+	
+	.modal-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: left top;
+	}
+	
+	#modal-title {
+		text-align: center;
+		margin: 10px 0;
+		height: $modalTitleHeight;
+	}
+	
+	#modal-text {
+		overflow: auto;
+		height: $modalTextHeight;
+		margin-bottom: 30px;
+	}
+	
+	#modal-button {
+		float: right;
+
+	}
+	
+	
+}
+
+
