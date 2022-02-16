@@ -12,7 +12,7 @@ export const timelineContent: TimelineContent[] = [
         content: 'Formation au Cfaad de Bellegarde.'
     },
     {
-        label: '2002 - Aujourd\'hui',
+        label: `2002 - ${new Date().getFullYear()}`,
         title: 'Chef d\'équipe Moypark Beef Orléans (ex Mckey Foods Services)',
         content: "Chef d'équipe de production.\n" +
             "\n" +
@@ -30,7 +30,7 @@ export const timelineContent: TimelineContent[] = [
         content: "Afin de me lancer dans le développement, je commence à suivre des cours sur OpenClassrooms puis suit les formations de Grafikart. Suite logique dans ma démarche personnelle, je me lance dans une reconversion professionelle à la Wild Code School d'Orléans afin de concrétiser mes années d'auto-formation. Je finalise ma formation en réalisant un stage chez Puddinglab."
     },
     {
-        label: 'Aujourd\'hui',
+        label: new Date().getFullYear(),
         title: 'Recherche expérience dans le développement web',
         content: "Actuellement en recherche d'expérience je refléchis aux possibilités qui me sont offertes (freelance, CDD, CDI)"
     },

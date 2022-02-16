@@ -13,7 +13,7 @@ export type TechnologyProps = {
 };
 
 export type TimelineContent = {
-    label: string,
+    label: string | number,
     title: string,
     content: string,
 }
