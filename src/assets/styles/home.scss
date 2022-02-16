@@ -1,7 +1,8 @@
-@import "variables";
+@import "variables.scss";
 
 .homepage {
 	.firstview {
+		
 		height: 100vh;
 		
 		h1 {
@@ -12,4 +13,25 @@
 			box-shadow: $dark-color 0.1em 0.1em 0.2em;
 		}
 	}
+	
+	.secondView {
+		min-height: 100vh;
+		
+		.card-description {
+			background-color: $primary-color;
+			min-height: 48vh;
+			
+		}
+		
+	}
+	
+	.thirdView {
+		min-height: 100vh;
+	}
+	
+	.fourthView {
+		min-height: 100vh;
+
+	}
+	
 }

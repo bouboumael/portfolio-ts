@@ -1,13 +1,13 @@
 import React from "react";
-import Navbar from "../navbar/Navbar";
+import Footer from "../footer/Footer";
 
 const Layout: React.FC<any> = ({children}) => {
     return (
         <div className={'layout'}>
-            <Navbar/>
             <div className={'content'}>
                 {children}
             </div>
+            <Footer/>
         </div>
     );
 }
