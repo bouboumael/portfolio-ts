@@ -8,14 +8,20 @@ const FourthView = () => {
     const cards = projectsCards
 
     let indexInit: number = 100;
+    let positionLeft: number = 20.5;
     cards.map((card: ProjectCard, index: number) => {
         if (index > 0) {
-            const newIndex: number = indexInit - (indexInit / cards.length);
-            card.style = {zIndex: newIndex};
+            const newIndex: number = Math.ceil(indexInit - (indexInit / cards.length));
+            card.style = {
+                zIndex: newIndex,
+                left: positionLeft + '%',
+            };
             indexInit = indexInit - newIndex;
+            positionLeft = positionLeft + 0.2;
         } else {
             card.style = {zIndex: indexInit};
         }
+        console.log(card)
     })
 
     return (

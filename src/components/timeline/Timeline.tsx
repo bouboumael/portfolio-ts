@@ -15,8 +15,8 @@ const Timeline = () => {
     const contents: TimelineContent[] = timelineContent
 
     return (
-        <div className='progress mt-40'>
-            <div className='progress_inner w-screen'>
+        <div className='progress mt-40 w-screen md:w-11/12'>
+            <div className='progress_inner'>
                 {contents.map((content, index) => {
                     return (
                         <div key={index} className='progress_inner__step'>
@@ -37,7 +37,7 @@ const Timeline = () => {
                 <div className='progress_inner__tabs'>
                     {contents.map((content, index) => {
                         return (
-                            <div key={index} className={`tab tab-${index} md:w-3/4 xl:w-1/2`}>
+                            <div key={index} className={`tab tab-${index} w-4/5 xl:w-1/2`}>
                                 <h3>{content.title}</h3>
                                 <p>{content.content}</p>
                             </div>
