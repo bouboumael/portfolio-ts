@@ -9,18 +9,18 @@ const Footer = () => {
     const copyright: number = new Date().getFullYear()
 
     return (
-        <footer className="footer-distributed flex flex-col justify-center lg:flex-row lg:items-center">
+        <footer className="footer-distributed flex flex-col justify-between md:flex-row md:items-center">
             <div className="footer-left">
-                <div className={'flex flex-col'}>
-                    <img className={'lg:w-1/3 sm:w-1/3 xl:w-1/4 sm:ml-16 md:ml-20 lg:ml-28 xl:ml-40'} src={imageUrl('mael-logo-pins-200x200.png')} alt="logo mc"/>
-                    <p className="footer-links">
+                <div className={'flex flex-col items-center md:justify-center'}>
+                    <img className={'sm:w-1/2 lg:w-1/4 xl:w-1/4'} src={imageUrl('mael-logo-pins-200x200.png')} alt="logo mc"/>
+                    <p className="footer-links text-center">
                         <a href={"#home"} className="link-1">Home</a>
                         <a href={"#parcours"}>Mon parcours</a>
                         <a href={"#competences"}>Mes compétences</a>
                         <a href={"#projets"}>Mes Projets</a>
                         <a href="#">Contact</a>
                     </p>
-                    <p className="footer-company-name lg:ml-32 xl:ml-52">MC © {copyright}</p>
+                    <p className="footer-company-name">MC © {copyright}</p>
                 </div>
             </div>
             <div className="footer-center">
@@ -43,10 +43,10 @@ const Footer = () => {
                     Développeur web & web mobile. Passionné de développement et de nouvelles technologies. J'aime le travail d'équipe, mais je sais aussi travailler en solo. En perpétuelle formation, j'aime apprendre et évoluer. En faisant appel à moi, je serai un atout pour votre projet.
                 </p>
                 <div className="footer-icons flex justify-around">
-                    <a href={"https://github.com/bouboumael"} target={'_blank'}><FontAwesomeIcon icon={faGithub} size={'2x'}/></a>
-                    <a href={"https://www.linkedin.com/in/ma%C3%ABl-chariault/"} target={'_blank'}><FontAwesomeIcon icon={faLinkedin} size={'2x'}/></a>
-                    <a href={"https://www.facebook.com/bouboumael"} target={'_blank'}><FontAwesomeIcon icon={faFacebook} size={'2x'}/></a>
-                    <a href={"https://twitter.com/djboubou45"} target={'_blank'}><FontAwesomeIcon icon={faTwitter} size={'2x'}/></a>
+                    <a href={"https://github.com/bouboumael"} target={'_blank'} rel="noreferrer"><FontAwesomeIcon icon={faGithub} size={'2x'}/></a>
+                    <a href={"https://www.linkedin.com/in/ma%C3%ABl-chariault/"} target={'_blank'} rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} size={'2x'}/></a>
+                    <a href={"https://www.facebook.com/bouboumael"} target={'_blank'} rel="noreferrer"><FontAwesomeIcon icon={faFacebook} size={'2x'}/></a>
+                    <a href={"https://twitter.com/djboubou45"} target={'_blank'} rel="noreferrer"><FontAwesomeIcon icon={faTwitter} size={'2x'}/></a>
                 </div>
             </div>
         </footer>
