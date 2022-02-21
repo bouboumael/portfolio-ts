@@ -1,5 +1,3 @@
-import React from "react";
-
 export type ToggleMenu = () => void;
 
 export type TechnologyProps = {
@@ -18,12 +16,6 @@ export type TimelineContent = {
     content: string,
 }
 
-export type ProjectCard = {
-    element: JSX.Element,
-    style?: React.CSSProperties,
-}
-
-
 export type CardProps = {
     title: string,
     description: string,
@@ -33,3 +25,12 @@ export type CardProps = {
     };
     text: string,
 };
+
+export type Project = {
+    title: string,
+    description: string,
+    year: number,
+    subDescription: string,
+    image?: string,
+    link?: string,
+}
