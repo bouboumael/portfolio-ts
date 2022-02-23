@@ -52,10 +52,6 @@
 	}
 
 	// card 1
-	#project-0:checked ~ .scene .card--project-0 {
-		transform: translate(40%, 0) rotate(15deg) translate(0, 10%);
-		z-index: 2;
-	}
 	#project-0:checked ~ .scene .card--project-1 {
 		transform: translate(40%, 0) rotate(15deg) translate(0, -10%);
 		z-index: 1;
@@ -65,10 +61,6 @@
 	}
 
 	// card 2
-	#project-1:checked ~ .scene .card--project-1 {
-		transform: translate(40%, 0) rotate(15deg) translate(0, 10%);
-		z-index: 2;
-	}
 	#project-1:checked ~ .scene .card--project-0 {
 		transform: translate(40%, 0) rotate(15deg) translate(0, -10%);
 		z-index: 1;
@@ -77,36 +69,20 @@
 		z-index: 3;
 	}
 	
-	// card 2
-	#project-2:checked ~ .scene .card--project-2 {
-		transform: translate(40%, 0) rotate(15deg) translate(0, 10%);
-		z-index: 2;
-	}
-	#project-2:checked ~ .scene .card--project-0 {
-		transform: translate(40%, 0) rotate(15deg) translate(0, -10%);
-		z-index: 1;
-	}
-	#project-2:checked ~ .scene label[for='project-0'] {
-		z-index: 3;
-	}
+	$cardElementPosition: 5;
 	
 	
 	// A faire: DRY et logique pour monter les cards en arrière
 	@mixin card($card-number) {
 		// card en premier plan
-		#project-#{$card-number}:checked ~ .scene .card--project#{$card-number} {
+		#project-#{$card-number}:checked ~ .scene .card--project-#{$card-number} {
 			transform: translate(40%, 0) rotate(15deg) translate(0, 10%);
 			z-index: 2;
 		}
-		// other cards
-		#project-1:checked ~ .scene .card--project-0 {
-			transform: translate(40%, 0) rotate(15deg) translate(0, -10%);
-			z-index: 1;
-		}
-		// position des labels
-		#project-1:checked ~ .scene label[for='project-0'] {
-			z-index: 3;
-		}
+	}
+	
+	@for $child from 0 to 2 {
+		@include card($child);
 	}
 	
 	// A faire: ajuster pour caler le clique sur le label de chaque card
@@ -132,6 +108,10 @@
 		height: 100vh;
 		width: 100%;
 		position: relative;
+		
+		// change background foreach child elements
+		
+		
 	}
 	
 	[type='radio'] {
