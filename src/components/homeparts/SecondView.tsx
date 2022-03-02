@@ -23,7 +23,7 @@ const SecondView = () => {
         if (target) {
             observer.observe(target);
         }
-    }, [])
+    }, [typewriter]);
 
     return (
         <>

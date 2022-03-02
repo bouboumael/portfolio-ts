@@ -18,7 +18,7 @@ const Footer = () => {
                         <a href={"#parcours"}>Mon parcours</a>
                         <a href={"#competences"}>Mes compétences</a>
                         <a href={"#projets"}>Mes Projets</a>
-                        <a href="#">Contact</a>
+                        <a href={"#contact"}>Contact</a>
                     </p>
                     <p className="footer-company-name">MC © {copyright}</p>
                 </div>

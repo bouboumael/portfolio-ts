@@ -26,11 +26,10 @@ const Timeline = () => {
                 })}
                 <input onChange={() => setStart(true)} id='step-1' name='step' type='radio' checked={start}/>
                 {contents.map((content, index) => {
-                    if (index > 0){
-                        return (
-                            <input key={index} id={`step-${index + 1}`} name='step' type='radio' onChange={starting}/>
-                        )
-                    }
+                    return index > 0 ? (
+                        <input key={index} onChange={() => starting()} id={`step-${index + 1}`} name='step' type='radio'/>
+                    ) : null
+
                 })}
                 <div className='progress_inner__bar'/>
                 <div className='progress_inner__bar--set'/>
