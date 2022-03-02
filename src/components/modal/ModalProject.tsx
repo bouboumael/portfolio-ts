@@ -42,7 +42,7 @@ export default function ModalProject({img, title, link, text}: Project) {
                         {text}
                     </Typography>
                     <Typography id={"modal-button"} sx={{ mt: 2 }}>
-                        <a href={link ?? imageUrl(img ? img?.src: '')} className={'bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded'} target={'_blank'}>Aller sur le site</a>
+                        <a href={link ?? imageUrl(img ? img?.src: '')} className={'bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded'} target={'_blank'} rel={"noreferrer"}>Aller sur le site</a>
                     </Typography>
                 </Box>
             </Modal>

@@ -25,7 +25,7 @@ const Technology = (props: TechnologyProps) => {
 
     return (
         <>
-            <a className={"flex justify-center basis-1/4 h-32 mb-5"} href={link} target={'_blank'}>
+            <a className={"flex justify-center basis-1/4 h-32 mb-5"} href={link} target={'_blank'} rel={"noreferrer"}>
                 <div
                     className="technology flex items-center justify-center px-20 rounded bg-amber-50/5 shadow-md shadow-blue-200" title={title}>
                     <img src={imageUrl(logo.src)} alt={logo.alt}/>
