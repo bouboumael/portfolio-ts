@@ -2,8 +2,9 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import {CardProps} from "../../types/portfolioTypes";
+import {Project} from "../../types/portfolioTypes";
 import './modalProject.scss';
+import {imageUrl} from "../../tools/image";
 
 const style = {
     position: 'absolute' as 'absolute',
@@ -17,14 +18,13 @@ const style = {
     p: 4,
 };
 
-export default function ModalProject({img, title, text}: CardProps) {
+export default function ModalProject({img, title, link, text}: Project) {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-
     return (
         <div className={'modal-project'}>
-            <button onClick={handleOpen} className={'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'}>En voir plus</button>
+            <button onClick={handleOpen} className={'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-8'}>En voir plus</button>
             <Modal
                 open={open}
                 onClose={handleClose}
@@ -33,7 +33,7 @@ export default function ModalProject({img, title, text}: CardProps) {
             >
                 <Box sx={style} className={'modal-box'}>
                     <div className="modal-box-image">
-                        <img className={'modal-image'} src={img.src} alt={img.alt}/>
+                        <img className={'modal-image'} src={imageUrl(img ? img.src : '')} alt={img?.alt}/>
                     </div>
                     <Typography id="modal-title" variant="h6" component="h2">
                         {title.toUpperCase()}
@@ -42,7 +42,7 @@ export default function ModalProject({img, title, text}: CardProps) {
                         {text}
                     </Typography>
                     <Typography id={"modal-button"} sx={{ mt: 2 }}>
-                        <a href={img.src} className={'bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded'}>Aller sur le site</a>
+                        <a href={link ?? imageUrl(img ? img?.src: '')} className={'bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded'} target={'_blank'}>Aller sur le site</a>
                     </Typography>
                 </Box>
             </Modal>

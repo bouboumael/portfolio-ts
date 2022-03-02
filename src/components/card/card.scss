@@ -1,5 +1,17 @@
-.card {
-	.card-block{
-		height: 600px;
+@import "../../assets/styles/variables.scss";
+.card-project{
+	$height: 450px;
+	$heightImg: $height / 2;
+	$heightContent: ($height - $heightImg) / 1.6;
+	
+	height: $height;
+	background-color: $light-color;
+	
+	.card-img{
+		height: $height / 2;
+		object-fit: cover;
+	}
+	.card-content{
+		height: $heightContent;
 	}
 }

@@ -2,21 +2,24 @@ import {Project} from "../types/portfolioTypes";
 
 export const projects: Project[] = [
     {
-        title: 'Recherche de taf',
-        description: "Y a pas un pekin qui me donne une chance",
+        title: 'JobPermut',
+        description: "MVP sur le concept de l'échange d'un meme travail à distances différentes",
         year: new Date().getFullYear(),
-        subDescription: "Le premier projet de moi",
+        subDescription: "Dernier Projet de formation",
+        img: {
+            src: 'JobPermutPc.webp',
+            alt: 'JobPermut'
+        },
+        link: "http://jobpermut.fr/",
     },
     {
-        title: 'Quitter mon job',
-        description: "Ras le bol des fichiers excel...",
+        title: 'DevItEasy',
+        description: "Site d'un projet de création d'agence web",
         year: new Date().getFullYear(),
-        subDescription: "le deuxième projet de moi",
+        subDescription: "Projet de fin d'étude et de futur professionnel",
+        img: {
+            src: 'JobPermutPc.webp',
+            alt: 'JobPermut'
+        }
     },
-    {
-        title: 'le projet test qui fout la merde',
-        description: "si tu me vois, c'est que ça marche",
-        year: new Date().getFullYear(),
-        subDescription: "le projet test",
-    }
 ]
