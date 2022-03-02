@@ -23,6 +23,10 @@
 			
 		}
 		
+		@media screen and (max-width: 767px) {
+			min-height: 220vh;
+		}
+		
 	}
 	
 	.thirdView {
@@ -31,7 +35,7 @@
 	
 	.fourthView {
 		min-height: 100vh;
-
+		
 	}
 	
 }

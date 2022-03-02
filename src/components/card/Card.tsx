@@ -1,19 +1,19 @@
 import React from 'react';
-import img from '../../assets/images/mael2.webp';
 import './card.scss';
-import ModalProject from "../modal/modalProject";
-import {CardProps} from "../../types/portfolioTypes";
+import ModalProject from "../modal/ModalProject";
+import {Project} from "../../types/portfolioTypes";
+import {imageUrl} from "../../tools/image";
 
-const Card = ({title, description, img, text}: CardProps) => {
+const Card = ({title, description, subDescription, year, img, link}: Project) => {
     return (
-        <div className="max-w-md rounded overflow-hidden shadow-sm bg-white card-block">
-            <img className="w-full h-80 object-cover" src={img.src} alt="Sunset in the mountains"/>
-            <div className="px-6 py-4 h-80 flex flex-col items-center">
-                <h3 className="font-bold text-xl h-1/4">{title}</h3>
-                <p className="text-gray-700 text-base h-2/4">
-                    {description}
-                </p>
-                <ModalProject title={title} description={description} img={img} text={text}/>
+        <div className="card-project rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 mb-10 md:mr-5 md:w-2/3 lg:w-1/3 xl:w-1/4">
+            <img className="card-img rounded-t-lg" src={imageUrl(img ? img.src : '')} alt={img?.alt}/>
+            <div className="card-content p-5">
+                <h3 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h3>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
+            </div>
+            <div className="card-btn float-right mr-5">
+                <ModalProject title={title} description={description} subDescription={subDescription} year={year} img={img} link={link}/>
             </div>
         </div>
     );

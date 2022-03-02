@@ -84,6 +84,15 @@ export const technologies: TechnologyProps[] = [
     },
     {
         logo: {
+            src: "logos/react-native.png",
+            alt: "React Native Logo",
+        },
+        starNumber: 2,
+        link: "https://reactnative.dev/",
+        title:  'React Native'
+    },
+    {
+        logo: {
             src: "logos/Gatsby.png",
             alt: "logo Gatbsy",
         },

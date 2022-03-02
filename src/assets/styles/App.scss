@@ -43,3 +43,17 @@ p {
 	backdrop-filter: blur(5px);
 }
 
+body::-webkit-scrollbar {
+	width: 10px; /* width of the entire scrollbar */;
+}
+
+body::-webkit-scrollbar-track {
+	background: $light-color; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: $dark-color; /* color of the scroll thumb */
+	border-radius: 3px; /* roundness of the scroll thumb */
+	border: $primary-color solid 1px; /* border of the scroll thumb */
+}
+
