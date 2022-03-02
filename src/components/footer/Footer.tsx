@@ -9,7 +9,7 @@ const Footer = () => {
     const copyright: number = new Date().getFullYear()
 
     return (
-        <footer className="footer-distributed flex flex-col justify-between md:flex-row md:items-center">
+        <footer className="footer-distributed flex flex-col justify-between lg:flex-row md:items-center">
             <div className="footer-left">
                 <div className={'flex flex-col items-center md:justify-center'}>
                     <img className={'sm:w-1/2 lg:w-1/4 xl:w-1/4'} src={imageUrl('mael-logo-pins-200x200.png')} alt="logo mc"/>
@@ -23,7 +23,7 @@ const Footer = () => {
                     <p className="footer-company-name">MC © {copyright}</p>
                 </div>
             </div>
-            <div className="footer-center">
+            <div className="footer-center text-center lg:text-left">
                 <div>
                     <i className="fa fa-map-marker"/>
                     <p>St Cyr en Val, Loiret, France</p>
