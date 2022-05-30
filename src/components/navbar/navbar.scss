@@ -1,140 +1,54 @@
-@import "../../assets/styles/variables.scss";
-
-.navbar{
-	width: 100%;
-	min-height: 10vh;
+.navbar {
 	position: fixed;
+	z-index: 10;
+	transition: .5s;
 	
-	#menu {
-		$ray:  140px;
-		width: $ray;
-		height: $ray;
-		position: absolute;
-		left: 2%;
-		top: 50%;
-		margin: -75px 0 0 -75px;
-		list-style: none;
-		font-size: 200%;
-		
-		.menu-button {
-			$ray: 200px;
-			width: $ray;
-			height: $ray;
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			margin: -75px 0 0 -75px;
-			border-radius: 50%;
-			background-image: url("../../assets/images/mael.webp");
-			background-size: cover;
-			overflow: hidden;
-			text-decoration: none;
-			opacity: 0;
-			z-index: -1;
-			box-shadow: 1px 1px 6px 1px $dark-color;
-			
-			&:active {
-				box-shadow: none;
-			}
-		}
-		
-		.menu-item {
-			$ray: 60px;
-			width: $ray;
-			height: $ray;
+	.menu-bar {
+		border-radius: 25px;
+		height: fit-content;
+		display: inline-flex;
+		background-color: rgba(0, 0, 0, .4);
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		align-items: center;
+		padding: 0 10px;
+		margin: 30px 0 0 0;
+		li {
+			list-style: none;
+			color: white;
+			font-family: sans-serif;
+			font-weight: bold;
+			padding: 12px 16px;
+			margin: 0 8px;
 			position: relative;
-			left: 80%;
-			line-height: 5px;
-			top: 80%;
-			margin: -50px 0 0 -50px;
-			border-radius: 50%;
-			box-shadow: 1px 1px 6px 1px $dark-color;
-			background-color: $white-color;
-			transform: translate(0px, 0px);
-			transition: transform 500ms;
-			
-			&:hover{
-				background-color: $primary-color;
-				
-				span {
-					color: $white-color;
+			cursor: pointer;
+			white-space: nowrap;
+			&::before {
+				content: " ";
+				position: absolute;
+				top: 0;
+				left:0;
+				height:100%;
+				width: 100%;
+				z-index:-1;
+				transition: .2s;
+				border-radius: 25px;
+			}
+			&:hover {
+				&::before {
+					background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+					box-shadow: 0px 3px 20px 0px black;
+					transform: scale(1.2);
 				}
-			}
-			
-			a {
-				position: relative;
-				left: 22%;
-				top: 20%;
-				text-decoration: none;
-				
-				span {
-					color: $dark-color;
-				}
-			}
-		}
-		
-		&:not(:target)>a:first-of-type,
-		&:target>a:last-of-type {
-			opacity: 1;
-			z-index: 1;
-		}
-		
-		&:not(:target)>.icon-plus:before,
-		&:target>.icon-minus:before {
-			opacity: 1;
-		}
-		
-		$position: 80deg;
-		
-		&:target>.menu-item:nth-child(5) {
-			transform: rotate($position) translateY(-155px) rotate(-$position);
-			transition-delay: 0.1s;
-			
-			a {
-				left: 18%;
-			}
-		}
-		
-		&:target>.menu-item:nth-child(3) {
-			transform: rotate($position * 1.5) translateY(-155px) rotate(-$position * 1.5);
-			transition-delay: 0.2s;
-			
-			a {
-				left: 21.5%;
-			}
-		}
-		
-		&:target>.menu-item:nth-child(4) {
-			transform: rotate($position * 1.95) translateY(-140px) rotate(-$position * 1.95);
-			transition-delay: 0.3s;
-			
-			a {
-				left: 20%;
+				color: black;
 			}
 		}
 	}
 }
 
-.notVisible {
-	visibility: hidden;
-	opacity: 0;
+.nav-hidden {
+	transform: translateY(-100px);
 }
 
-.isVisible {
-	animation: show 5s forwards;
-}
 
-@keyframes show {
-	0% {
-		opacity: 0;
-		left: -10%;
-		top: -50%;
-	}
-	
-	100% {
-		opacity: 1;
-		left: 1%;
-		top: 50%;
-	}
-}
 

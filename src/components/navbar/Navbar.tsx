@@ -1,42 +1,19 @@
-import React, {useEffect, useState} from "react";
-import './navbar.scss';
-import {ToggleMenu} from "../../types/portfolioTypes";
+import React from 'react';
+import './navbar.scss'
 
-function Navbar() {
+const Navbar = () => {
 
-    const [isShow, setIsShow] = useState<boolean>(false);
-    useEffect(() => {
-        toggleMenu();
-    },[])
-
-    const toggleMenu: ToggleMenu = () => {
-        setIsShow(!isShow);
-    }
 
     return (
-        <>
-            <div className={`navbar flex justify-center`}>
-                <ul id="menu" className={isShow ? 'isVisible' : 'notVisible'}>
-                    <a className="menu-button icon-plus" href="#menu" title="Afficher le Menu"/>
-                    <a className="menu-button icon-minus" href="#0" title="Cacher le menu"/>
-                    <li className="menu-item">
-                        <a href="#menu">
-                            <span className="fab fa-github"/>
-                        </a>
-                    </li>
-                    <li className="menu-item">
-                        <a href="#menu">
-                            <span className="fas fa-envelope"/>
-                        </a>
-                    </li>
-                    <li className="menu-item">
-                        <a href="#menu">
-                            <span className="fas fa-id-card-alt"/>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </>
+        <div className="navbar w-screen flex justify-center">
+            <ul className={"menu-bar"}>
+                <li><a href={"#home"}>Accueil</a></li>
+                <li><a href={"#parcours"}>Mon parcours</a></li>
+                <li><a href={"#competences"}>Mes Compétences</a></li>
+                <li><a href={"#projets"}>Mes Projets</a></li>
+                <li><a href={"#contact"}>Contact</a></li>
+            </ul>
+        </div>
     )
 }
 
