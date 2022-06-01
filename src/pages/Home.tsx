@@ -17,6 +17,7 @@ function Home() {
         <div className={'homepage'}>
             <Helmet>
                 <title>Maël Chariault</title>
+                <script src="https://kit.fontawesome.com/365f79b953.js" crossOrigin="anonymous"></script>
             </Helmet>
             <Layout>
                 <section id={'home'}>

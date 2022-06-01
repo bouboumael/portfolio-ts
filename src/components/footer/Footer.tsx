@@ -1,12 +1,29 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import './footer.scss'
 import {imageUrl} from "../../tools/image";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faFacebook, faGithub, faLinkedin, faTwitter} from "@fortawesome/free-brands-svg-icons";
+import {api} from "../../services/getApi";
+
+
+interface Social {
+    id: number,
+    name: string,
+    url: string,
+    icon: string
+    is_active: boolean
+}
 
 const Footer = () => {
-
     const copyright: number = new Date().getFullYear()
+    const [socials, setSocials] = useState<Social[]>([])
+    useEffect(() => {
+        apiSocials()
+    }, [])
+
+    const apiSocials = async () => {
+        const response = await api.get('/socials')
+        const data = response.data['hydra:member']
+        setSocials(data)
+    }
 
     return (
         <footer className="footer-distributed flex flex-col justify-between lg:flex-row md:items-center">
@@ -43,10 +60,13 @@ const Footer = () => {
                     Développeur web & web mobile. Passionné de développement et de nouvelles technologies. J'aime le travail d'équipe, mais je sais aussi travailler en solo. En perpétuelle formation, j'aime apprendre et évoluer. En faisant appel à moi, je serai un atout pour votre projet.
                 </p>
                 <div className="footer-icons flex justify-around">
-                    <a href={"https://github.com/bouboumael"} target={'_blank'} rel="noreferrer"><FontAwesomeIcon icon={faGithub} size={'2x'}/></a>
-                    <a href={"https://www.linkedin.com/in/ma%C3%ABl-chariault/"} target={'_blank'} rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} size={'2x'}/></a>
-                    <a href={"https://www.facebook.com/bouboumael"} target={'_blank'} rel="noreferrer"><FontAwesomeIcon icon={faFacebook} size={'2x'}/></a>
-                    <a href={"https://twitter.com/djboubou45"} target={'_blank'} rel="noreferrer"><FontAwesomeIcon icon={faTwitter} size={'2x'}/></a>
+                    {socials.map((social: Social, index: number) => {
+                        return (
+                            <a key={index} href={social.url} target={'_blank'} rel="noreferrer">
+                                <i className={`social-links ${social.icon}`}></i>
+                            </a>
+                        )
+                    })}
                 </div>
             </div>
         </footer>
