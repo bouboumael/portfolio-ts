@@ -1,10 +1,8 @@
 export type ToggleMenu = () => void;
 
 export type TechnologyProps = {
-    logo: {
-        src: string,
-        alt: string,
-    },
+    logoSrc: string,
+    logoAlt: string,
     starNumber: number,
     title?: string,
     link?: string,

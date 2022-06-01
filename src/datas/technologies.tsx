@@ -1,5 +1,7 @@
 import {TechnologyProps} from "../types/portfolioTypes";
+import {api} from "../services/getApi";
 
+/*
 export const technologies: TechnologyProps[] = [
     {
         logo: {
@@ -183,3 +185,10 @@ export const technologies: TechnologyProps[] = [
     },
 
 ]
+*/
+
+export const Technologies = async () => {
+    const request = await api.get('/technologies');
+    const technologies: TechnologyProps[] = request.data['hydra:member'];
+    return technologies;
+}
