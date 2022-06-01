@@ -1,18 +1,19 @@
 .navbar {
 	position: fixed;
 	z-index: 10;
-	transition: .5s;
+	transition: transform .5s;
 	
 	.menu-bar {
 		border-radius: 25px;
 		height: fit-content;
 		display: inline-flex;
-		background-color: rgba(0, 0, 0, .4);
-		-webkit-backdrop-filter: blur(10px);
-		backdrop-filter: blur(10px);
 		align-items: center;
 		padding: 0 10px;
 		margin: 30px 0 0 0;
+		background-color: rgba(0, 0, 0, .4);
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		
 		li {
 			list-style: none;
 			color: white;
@@ -34,21 +35,40 @@
 				transition: .2s;
 				border-radius: 25px;
 			}
+			
 			&:hover {
 				&::before {
 					background: linear-gradient(to bottom, #e8edec, #d2d1d3);
-					box-shadow: 0px 3px 20px 0px black;
+					box-shadow: 0 3px 20px 0 black;
 					transform: scale(1.2);
 				}
 				color: black;
 			}
+		}
+		@media screen and (max-width: 767px) {
+			border-radius: 0 0 25px 25px;
+		}
+	}
+	
+	@media screen and (max-width: 767px) {
+		.menu-bar {
+			display: block;
+			width: 100%;
+			margin: 0;
+			text-align: center;
 		}
 	}
 }
 
 .nav-hidden {
 	transform: translateY(-100px);
+	@media screen and (max-width: 767px) {
+		transform: translateY(-300px);
+	}
 }
+
+
+
 
 
 

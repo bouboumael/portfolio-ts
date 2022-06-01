@@ -9,7 +9,7 @@ interface Social {
     name: string,
     url: string,
     icon: string
-    is_active: boolean
+    isActive: boolean
 }
 
 const Footer = () => {
@@ -41,17 +41,19 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-center text-center lg:text-left">
-                <div>
-                    <i className="fa fa-map-marker"/>
-                    <p>St Cyr en Val, Loiret, France</p>
-                </div>
-                <div>
-                    <i className="fa fa-phone"/>
-                    <p>(+33) 06 08 61 30 88</p>
-                </div>
-                <div>
-                    <i className="fa fa-envelope"/>
-                    <p><a href="mailto:support@company.com">bouboumael@gmail.com</a></p>
+                <div className={'text-left md:pl-20'}>
+                    <div>
+                        <i className="fa fa-map-marker"/>
+                        <p>St Cyr en Val, Loiret, France</p>
+                    </div>
+                    <div>
+                        <i className="fa fa-phone"/>
+                        <p>(+33) 06 08 61 30 88</p>
+                    </div>
+                    <div>
+                        <i className="fa fa-envelope"/>
+                        <p><a href="mailto:support@company.com">bouboumael@gmail.com</a></p>
+                    </div>
                 </div>
             </div>
             <div className="footer-right">
@@ -60,7 +62,7 @@ const Footer = () => {
                     Développeur web & web mobile. Passionné de développement et de nouvelles technologies. J'aime le travail d'équipe, mais je sais aussi travailler en solo. En perpétuelle formation, j'aime apprendre et évoluer. En faisant appel à moi, je serai un atout pour votre projet.
                 </p>
                 <div className="footer-icons flex justify-around">
-                    {socials.map((social: Social, index: number) => {
+                    {socials.filter((social: Social) => social.isActive ).map((social: Social, index: number) => {
                         return (
                             <a key={index} href={social.url} target={'_blank'} rel="noreferrer">
                                 <i className={`social-links ${social.icon}`}></i>
