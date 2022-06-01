@@ -156,19 +156,16 @@
 		}
 	}
 	
+	.social-links {
+		
+		font-size: 40px;
+		color: $light-color;
+		
+		&:hover{
+			color: $dark-color;
+		}
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* If you don't want the footer to be responsive, remove these media queries */
 
