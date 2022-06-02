@@ -11,8 +11,12 @@ window.onload = () => {
         radius: 25,
         color: 'blue',
         draw: function() {
+            let image = new Image();
+            image.src = '../assets/images/mael-logo-pins.png';
+            console.log(image);
             ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2, true);
+            //ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2, true);
+            ctx.drawImage(image, this.x, this.y, this.radius, 0, Math.PI*2, true);
             ctx.closePath();
             ctx.fillStyle = this.color;
             ctx.fill();
