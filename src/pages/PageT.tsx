@@ -1,11 +1,10 @@
 import React from "react";
-import Navbar from "../components/navbar/Navbar";
+import './test.scss'
 
 const PageT = () => {
     return (
         <div>
-            <Navbar />
-            <h1 style={{color: "red"}}>PageT</h1>
+            <canvas id="canvas" style={{width: '100%', height: '100%'}}></canvas>
         </div>
     );
 };
