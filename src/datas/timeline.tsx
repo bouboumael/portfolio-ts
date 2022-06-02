@@ -27,7 +27,7 @@ export const timelineContent: TimelineContent[] = [
     {
         label: '2018 - 2021',
         title: 'Reconversion Développeur Web & Web Mobile',
-        content: "Afin de me lancer dans le développement, je commence à suivre des cours sur OpenClassrooms puis suit les formations de Grafikart. Suite logique dans ma démarche personnelle, je me lance dans une reconversion professionelle à la Wild Code School d'Orléans afin de concrétiser mes années d'auto-formation. Je finalise ma formation en réalisant un stage chez Puddinglab."
+        content: "Afin de me lancer dans le développement, je commence à suivre des cours sur OpenClassrooms puis suit les formations de Grafikart. Suite logique dans ma démarche personnelle, je me lance dans une reconversion professionelle à la Wild Code School d'Orléans afin de concrétiser mes années d'auto-formation. Je finalise ma formation en réalisant un stage chez Puddinglab. J'obtiens mon diplôme de Développeur Web & Web Mobile."
     },
     {
         label: new Date().getFullYear() === 2021 ? '2021' : `2021 - ${new Date().getFullYear()}`,

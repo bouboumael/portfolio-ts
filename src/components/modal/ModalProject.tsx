@@ -5,6 +5,7 @@ import Modal from '@mui/material/Modal';
 import {Project} from "../../types/portfolioTypes";
 import './modalProject.scss';
 import {imageUrl} from "../../tools/image";
+import closeButton from '../../assets/images/close-button.svg';
 
 const style = {
     position: 'absolute' as 'absolute',
@@ -32,6 +33,7 @@ export default function ModalProject({imgSrc, imgAlt, title, link, text}: Projec
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={style} className={'modal-box'}>
+                    <img className="close" onClick={handleClose} src={closeButton} alt={'close button'}/>
                     <div className="modal-box-image">
                         <img className={'modal-image'} src={imageUrl(imgSrc ?? '')} alt={imgAlt ?? ''}/>
                     </div>

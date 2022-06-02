@@ -4,9 +4,21 @@
 	$modalHeight: 100%;
 	$modalImageHeight: $modalHeight * 0.5;
 	$modalTitleHeight: $modalHeight * 0.04;
-	$modalTextHeight: $modalHeight * 0.35;
+	$modalTextHeight: $modalHeight * 0.33;
+	$fontSizeTitle: 2em;
 	
 	background-color: $dark-color;
+	
+	.close {
+		text-align: center;
+		width: 25px;
+		float: right;
+		margin-bottom: 10px;
+		margin-top: -20px;
+		cursor: pointer;
+		font-weight: bold;
+		
+	}
 	
 	.modal-box-image {
 		width: 100%;
@@ -22,14 +34,24 @@
 	
 	#modal-title {
 		text-align: center;
-		margin: 10px 0;
+		margin-top: 50px;
 		height: $modalTitleHeight;
+		font-size: $fontSizeTitle;
+		
+		@media screen and (max-width: 768px) {
+			font-size: initial;
+		}
 	}
 	
 	#modal-text {
 		overflow: auto;
 		height: $modalTextHeight;
-		margin-bottom: 30px;
+		margin-bottom: 10px;
+		font-size: $fontSizeTitle - 0.5em;
+		
+		@media screen and (max-width: 768px) {
+			font-size: initial;
+		}
 	}
 	
 	.button-modal {
@@ -38,7 +60,7 @@
 		
 		@media (max-width: 768px) {
 			#modal-button {
-				margin-top: 0;
+				margin-top: 5px;
 			}
 		}
 	}
