@@ -18,7 +18,7 @@ const style = {
     p: 4,
 };
 
-export default function ModalProject({img, title, link, text}: Project) {
+export default function ModalProject({imgSrc, imgAlt, title, link, text}: Project) {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -33,7 +33,7 @@ export default function ModalProject({img, title, link, text}: Project) {
             >
                 <Box sx={style} className={'modal-box'}>
                     <div className="modal-box-image">
-                        <img className={'modal-image'} src={imageUrl(img ? img.src : '')} alt={img?.alt}/>
+                        <img className={'modal-image'} src={imageUrl(imgSrc ?? '')} alt={imgAlt ?? ''}/>
                     </div>
                     <Typography id="modal-title" variant="h6" component="h2">
                         {title.toUpperCase()}
@@ -42,7 +42,7 @@ export default function ModalProject({img, title, link, text}: Project) {
                         {text}
                     </Typography>
                     <Typography id={"modal-button"} sx={{ mt: 2 }}>
-                        <a href={link ?? imageUrl(img ? img?.src: '')} className={'bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded'} target={'_blank'} rel={"noreferrer"}>Aller sur le site</a>
+                        <a href={link ?? imageUrl(imgSrc ?? '')} className={'bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded'} target={'_blank'} rel={"noreferrer"}>Aller sur le site</a>
                     </Typography>
                 </Box>
             </Modal>

@@ -20,9 +20,7 @@ export type Project = {
     year: number,
     subDescription: string,
     link?: string | null,
-    img?: {
-        src: string,
-        alt: string,
-    };
+    imgSrc?: string,
+    imgAlt?: string,
     text?: string,
 }
