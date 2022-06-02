@@ -41,9 +41,11 @@ export default function ModalProject({imgSrc, imgAlt, title, link, text}: Projec
                     <Typography id="modal-text" sx={{ mt: 2 }}>
                         {text}
                     </Typography>
-                    <Typography id={"modal-button"} sx={{ mt: 2 }}>
-                        <a href={link ?? imageUrl(imgSrc ?? '')} className={'bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded'} target={'_blank'} rel={"noreferrer"}>Aller sur le site</a>
-                    </Typography>
+                    <div className="button-modal">
+                        <Typography id={"modal-button"} sx={{ mt: 2 }}>
+                            <a href={link ?? imageUrl(imgSrc ?? '')} className={'bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded'} target={'_blank'} rel={"noreferrer"}>Aller sur le site</a>
+                        </Typography>
+                    </div>
                 </Box>
             </Modal>
         </div>
