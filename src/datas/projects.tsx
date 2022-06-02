@@ -1,5 +1,7 @@
 import {Project} from "../types/portfolioTypes";
+import {api} from "../services/getApi";
 
+/*
 export const projects: Project[] = [
     {
         title: 'JobPermut',
@@ -23,3 +25,9 @@ export const projects: Project[] = [
         }
     },
 ]
+*/
+export const Projects = async () => {
+    const request = await api.get('/projects');
+    const technologies: Project[] = request.data['hydra:member'];
+    return technologies;
+}
