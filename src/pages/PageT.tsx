@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import './test.scss'
+import LogoBall from "../components/logoBall/LogoBall";
 
 const PageT = () => {
     return (
         <div>
-            <canvas id="canvas" style={{width: '100%', height: '100%'}}></canvas>
+            <LogoBall />
+            <div className="test"><h1>TEST</h1></div>
         </div>
     );
 };

@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import PageT from "./pages/PageT";
 
 require('./tools/scrollMenu');
-require('./tools/ball');
+
 
 
 function App() {
