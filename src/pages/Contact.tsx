@@ -11,9 +11,9 @@ const Contact = () => {
                 <script src={"https://kit.fontawesome.com/365f79b953.js"} crossOrigin="anonymous"></script>
             </Helmet>
             <Layout>
-                <div id="contact flex flex-col">
+                <div id="contact" className={'flex flex-col justify-center items-center'}>
                     <h1>Contact</h1>
-                    <section className="contact-presentation">
+                    <section className="contact-presentation mt-10">
                         <h2>Maël Chariault</h2>
                     </section>
                     <section className="contact-form">
