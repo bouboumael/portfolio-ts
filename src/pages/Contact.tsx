@@ -2,10 +2,11 @@ import React from 'react';
 import {Helmet} from "react-helmet";
 import Layout from "../components/layout/Layout";
 import '../assets/styles/contact.scss';
+import Form from "../components/form/Form";
 
 const Contact = () => {
     return (
-        <div className={'homepage'}>
+        <div className={'contact'}>
             <Helmet>
                 <title>Maël Chariault</title>
                 <script src={"https://kit.fontawesome.com/365f79b953.js"} crossOrigin="anonymous"></script>
@@ -17,7 +18,7 @@ const Contact = () => {
                         <h2>Maël Chariault</h2>
                     </section>
                     <section className="contact-form">
-                        <h2>Formulaire de contact</h2>
+                        <Form />
                     </section>
                 </div>
             </Layout>

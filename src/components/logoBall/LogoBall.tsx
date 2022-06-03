@@ -28,7 +28,7 @@ const LogoBall = () => {
         }
     });
 
-    return <img src={logo} alt={"Mael logo"} className={`mt-60 md:mt-25 mael-logo`} ref={boxRef}/>
+    return <img src={logo} alt={"Mael logo"} className={`mt-60 sm:mt-0 md:mt-15 mael-logo`} ref={boxRef}/>
 }
 
 export default LogoBall;
