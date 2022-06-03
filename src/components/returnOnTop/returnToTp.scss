@@ -1,0 +1,43 @@
+@import '../../assets/styles/variables';
+
+$size: 50px;
+$placement: 30px;
+
+.scroll-up {
+  font-size: 30px;
+  display: inline-block;
+  background-color:  $secondary-color;
+  width: $size;
+  height: $size;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  position: fixed;
+  bottom: $placement;
+  right: $placement;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  border: 1px solid $light-color;
+  svg {
+    font-size: $size / 2;
+  }
+  
+  i {
+    color: white;
+  }
+}
+
+.scroll-up:hover {
+  cursor: pointer;
+  background-color:  $light-color;
+  border: 1px solid $dark-color;
+  i {
+    color: $dark-color;
+  }
+}
+.scroll-up.show {
+  opacity: 1;
+  visibility: visible;
+}

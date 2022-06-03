@@ -1,11 +1,13 @@
 import React from "react";
-import logo from "../../assets/images/mael-logo-pins.png";
+import LogoBall from "../logoBall/LogoBall";
+import DoubleArrow from "../doubleArrow/DoubleArrow";
 
 function FirstView() {
 
     return (
-        <div className={"flex flex-col justify-center items-center text-center firstview"}>
-            <img src={logo} alt={"Mael logo"} className={`mt-60 md:mt-0 mael-logo rotating`}/>
+        <div className={"flex flex-col justify-around items-center text-center firstview"}>
+            <LogoBall />
+            <DoubleArrow />
         </div>
     );
 }
