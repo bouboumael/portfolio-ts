@@ -1,5 +1,7 @@
 @import "variables.scss";
 
 #contact {
-	min-height: 70vh;
+	.contact-presentation {
+		min-height: 70vh;
+	}
 }
