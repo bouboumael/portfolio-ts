@@ -1,33 +1,33 @@
-import React, {useEffect, useRef, useState} from "react";
-import logo from "../../assets/images/mael-logo-pins.png";
+import gsap from "gsap";
+import React, {useLayoutEffect, useRef, useState} from "react";
+import logo from "../../assets/images/mael-logo-pins.png"
 
-const LogoBall = (props: any) => {
-    const {width, height, color, speed, delay} = props;
-    const [size, setSize] = useState({width: 0, height: 0});
-    useEffect(() => {
-        const resize = () => {
-            setSize({width: document.body.clientWidth, height: document.documentElement.clientHeight});
-        }
-        resize();
-        window.addEventListener('resize', resize);
-        return () => {
-            window.removeEventListener('resize', resize);
-        }
-    },[])
-    const canvasRef = useRef<HTMLCanvasElement>(null);
-    useEffect(() => {
-        const canvas = canvasRef.current
-        const context = canvas?.getContext('2d')
-        //Our first draw
-        context ? context.fillStyle = 'white' : null;
-        context?.fillRect(0, 0, size.width, size.height)
-    }, [])
 
-    return (
-        <div className="logo-ball">
-            <canvas id="canvas" ref={canvasRef} {...props} width={size.width} height={size.height}/>
-        </div>
-    );
+const LogoBall = () => {
+
+    const [size, setSize] = useState<number>();
+    let image = new Image()
+    image.src = logo;
+
+    const boxVar = {
+        from: {},
+        to: {
+            rotation: 360,
+            x: size,
+            duration: 3
+        },
+    }
+
+    const boxRef = useRef(null);
+    useLayoutEffect(() => {
+        image.onload = () => {
+            setSize((document.body.clientWidth - image.width) / 2)
+            console.log(image.width)
+            gsap.fromTo(boxRef.current,boxVar.from, boxVar.to);
+        }
+    });
+
+    return <img src={logo} alt={"Mael logo"} className={`mt-60 md:mt-0 mael-logo`} ref={boxRef}/>
 }
 
 export default LogoBall;
