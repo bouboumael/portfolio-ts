@@ -10,19 +10,25 @@ const LogoBall = () => {
     image.src = logo;
 
     const boxVar = {
-        from: {},
+        from: {
+            x: -500,
+        },
         to: {
             rotation: 360,
             x: size,
-            duration: 3
+            duration: 2
         },
     }
 
     const boxRef = useRef(null);
     useLayoutEffect(() => {
         image.onload = () => {
-            setSize((document.body.clientWidth - image.width) / 2)
-            console.log(image.width)
+            if (document.body.clientWidth > 768) {
+                setSize((document.body.clientWidth - image.width) / 2)
+            } else {
+                setSize(0)
+            }
+
             gsap.fromTo(boxRef.current,boxVar.from, boxVar.to);
         }
     });
