@@ -19,14 +19,23 @@ $placement: 30px;
   opacity: 0;
   visibility: hidden;
   z-index: 1;
+  border: 1px solid $light-color;
   svg {
     font-size: $size / 2;
-}
+  }
+  
+  i {
+    color: white;
+  }
 }
 
 .scroll-up:hover {
   cursor: pointer;
   background-color:  $light-color;
+  border: 1px solid $dark-color;
+  i {
+    color: $dark-color;
+  }
 }
 .scroll-up.show {
   opacity: 1;
