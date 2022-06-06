@@ -1,22 +1,32 @@
 import React, {useState} from 'react';
 import {ContactForm} from "../../types/portfolioTypes";
-import {Contact} from "../../datas/contact";
+import {ContactPost} from "../../datas/contact";
 
 const Form = () => {
-    const [form, setForm] = useState<ContactForm>({
+
+    const trameForm: ContactForm = {
         firstname: '',
         lastname: '',
         email: '',
         phone: '',
         subject: '',
         message: '',
-    });
+    }
+
+    const [form, setForm] = useState<ContactForm>(trameForm);
+    const [error, setError] = useState<object>({});
+    const [success, setSuccess] = useState<object>({});
 
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        Contact(form).then((res) => {
-            console.log(res)
-        });
+        ContactPost(form)
+            .then(({data}) => {
+                setSuccess(data);
+                setForm(trameForm);
+            })
+            .catch(({response}) => {
+                setError(response)
+            })
     }
 
     return (
@@ -37,6 +47,7 @@ const Form = () => {
                             value={form?.firstname}
                             onChange={(e) => setForm({...form, firstname: e.target.value})}
                         />
+                        <p className="text-red-500 text-xs italic">Please choose a password.</p>
                     </div>
                     <div className="w-full md:w-1/2 px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
