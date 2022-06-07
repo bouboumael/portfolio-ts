@@ -33,3 +33,12 @@ export type ContactForm = {
     subject: string,
     message: string,
 }
+
+export type ViolationList = {
+    firstname?: string,
+    lastname?: string,
+    email?: string,
+    phone?: string,
+    subject?: string,
+    message?: string,
+}
