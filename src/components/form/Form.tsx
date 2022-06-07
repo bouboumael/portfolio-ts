@@ -20,13 +20,14 @@ const Form = () => {
     }
 
     const [form, setForm] = useState<ContactForm>(trameForm);
-    const [errors, setErrors] = useState<any>([]);
+    const [errors, setErrors] = useState<ViolationList>({});
     const [success, setSuccess] = useState<object>({});
 
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         ContactPost(form)
             .then(({data}) => {
+                setErrors({});
                 setSuccess(data);
                 setForm(trameForm);
             })
