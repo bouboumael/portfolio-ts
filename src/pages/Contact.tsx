@@ -13,7 +13,7 @@ const Contact = () => {
                 <script src={"https://kit.fontawesome.com/365f79b953.js"} crossOrigin="anonymous"></script>
             </Helmet>
             <Layout>
-                <div id="contact" className={'flex flex-col justify-center items-center py-28'}>
+                <div id="contact" className={'flex flex-col justify-center items-center py-24'}>
                     <h1 className={"mb-12"}>Contact</h1>
                     <div className="flex w-full justify-between">
                         <section className="contact-presentation w-1/2 px-10 flex flex-col justify-start text-center items-center">

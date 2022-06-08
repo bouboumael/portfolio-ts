@@ -3,6 +3,7 @@ import {ContactForm, ViolationList} from "../../types/portfolioTypes";
 import {ContactPost} from "../../datas/contact";
 import {UcFirst} from "../../tools/ucFirst";
 import {Violation} from "../../types/portfolioInterface";
+import "./form.scss"
 
 const Form = () => {
 
@@ -152,7 +153,7 @@ const Form = () => {
                 </div>
                 <div className="flex flex-wrap mb-6">
                     <div className="w-full px-3 mb-6 md:mb-0">
-                        <button className="float-right bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        <button className="float-right text-white font-bold py-2 px-4 rounded btn-form">
                             Envoyer
                         </button>
                     </div>

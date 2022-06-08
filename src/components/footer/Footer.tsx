@@ -2,15 +2,10 @@ import React, {useEffect, useState} from "react";
 import './footer.scss'
 import {imageUrl} from "../../tools/image";
 import {api} from "../../services/getApi";
+import {Social} from "../../types/portfolioInterface";
 
 
-interface Social {
-    id: number,
-    name: string,
-    url: string,
-    icon: string
-    isActive: boolean
-}
+
 
 const Footer = () => {
     const copyright: number = new Date().getFullYear()
