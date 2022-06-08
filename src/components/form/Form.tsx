@@ -54,7 +54,7 @@ const Form = () => {
                             Prénom
                         </label>
                         <input
-                            className={`appearance-none block w-full bg-gray-200 text-gray-700 border ${ errors.firstname ? 'border-red-500' : "border-grey-200" } rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
+                            className={`appearance-none block w-full bg-gray-200 text-gray-700 border ${ errors.firstname ? 'border-red-500' : "border-grey-200" } rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white`}
                             id="firstname"
                             type="text"
                             placeholder="Maël"
