@@ -1,12 +1,8 @@
 import React, {useState} from 'react';
 import {ContactForm, ViolationList} from "../../types/portfolioTypes";
 import {ContactPost} from "../../datas/contact";
-
-interface Violation {
-    propertyPath: string;
-    message: string;
-    code: string;
-}
+import {UcFirst} from "../../tools/ucFirst";
+import {Violation} from "../../types/portfolioInterface";
 
 const Form = () => {
 
@@ -21,7 +17,7 @@ const Form = () => {
 
     const [form, setForm] = useState<ContactForm>(trameForm);
     const [errors, setErrors] = useState<ViolationList>({});
-    const [success, setSuccess] = useState<object>({});
+    const [success, setSuccess] = useState<any>({});
 
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -45,9 +41,13 @@ const Form = () => {
     }
 
     return (
-        <div className={'contact-form'}>
-            <form className="w-full max-w-lg" onSubmit={e => onSubmit(e)}>
-                <div className="flex flex-wrap -mx-3 mb-6">
+        <div className={'contact-form w-full'}>
+            {success.firstname ? <div className="bg-blue-100 border-t border-b border-blue-500 px-4 py-3 mb-6 rounded" role="alert">
+                <p className="font-bold text-blue-700">Message envoyé.</p>
+                <p className="text-sm text-blue-700">Merci {UcFirst(success.firstname)}! Je répondrais à votre message dès que possible.</p>
+            </div> : ""}
+            <form className="w-full" onSubmit={e => onSubmit(e)}>
+                <div className="flex flex-wrap mb-6">
                     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                                htmlFor="firstname">
@@ -80,7 +80,7 @@ const Form = () => {
                         {errors.lastname ? <p className="text-red-500 text-xs italic">{errors.lastname}</p> : null}
                     </div>
                 </div>
-                <div className="flex flex-wrap -mx-3 mb-6">
+                <div className="flex flex-wrap mb-6">
                     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                                htmlFor="email">
@@ -114,7 +114,7 @@ const Form = () => {
                         {errors.phone ? <p className="text-red-500 text-xs italic">{errors.phone}</p> : null}
                     </div>
                 </div>
-                <div className="flex flex-wrap -mx-3 mb-6">
+                <div className="flex flex-wrap mb-6">
                     <div className="w-full px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                                htmlFor="subject">
@@ -132,7 +132,7 @@ const Form = () => {
                         {errors.subject ? <p className="text-red-500 text-xs italic">{errors.subject}</p> : null}
                     </div>
                 </div>
-                <div className="flex flex-wrap -mx-3 mb-6">
+                <div className="flex flex-wrap mb-6">
                     <div className="w-full px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                                htmlFor="message">
@@ -150,7 +150,7 @@ const Form = () => {
                         {errors.message ? <p className="text-red-500 text-xs italic">{errors.message}</p> : null}
                     </div>
                 </div>
-                <div className="flex flex-wrap -mx-3 mb-6">
+                <div className="flex flex-wrap mb-6">
                     <div className="w-full px-3 mb-6 md:mb-0">
                         <button className="float-right bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                             Envoyer
