@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from "./pages/Home";
 import PageT from "./pages/PageT";
 import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 require('./tools/scrollMenu');
 
@@ -16,7 +17,7 @@ function App() {
                     <Route path="/" element={<Home/>}/>
                     <Route path={"/contact"} element={<Contact/>} />
                     <Route path="/test" element={<PageT/>}/>
-                    <Route path="*" element={<div>404</div>}/>
+                    <Route path="*" element={<NotFound />}/>
                 </Routes>
             </BrowserRouter>
         </>
