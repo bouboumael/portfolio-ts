@@ -2,15 +2,10 @@ import React, {useEffect, useState} from "react";
 import './footer.scss'
 import {imageUrl} from "../../tools/image";
 import {api} from "../../services/getApi";
+import {Social} from "../../types/portfolioInterface";
 
 
-interface Social {
-    id: number,
-    name: string,
-    url: string,
-    icon: string
-    isActive: boolean
-}
+
 
 const Footer = () => {
     const copyright: number = new Date().getFullYear()
@@ -29,7 +24,7 @@ const Footer = () => {
         <footer className="footer-distributed flex flex-col justify-between lg:flex-row md:items-center">
             <div className="footer-left">
                 <div className={'flex flex-col items-center md:justify-center'}>
-                    <img className={'sm:w-1/2 lg:w-1/4 xl:w-1/4'} src={imageUrl('mael-logo-pins-200x200.png')} alt="logo mc"/>
+                    <img className={'w-full lg:w-1/4 xl:w-1/4'} src={imageUrl('mael-logo-pins-200x200.png')} alt="logo mc"/>
                     <p className="footer-links text-center">
                         <a href={"#home"} className="link-1">Home</a>
                         <a href={"#parcours"}>Mon parcours</a>
@@ -41,7 +36,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-center text-center lg:text-left">
-                <div className={'text-left md:pl-20'}>
+                <div className={'text-left md:text-center lg:text-left lg:pl-20'}>
                     <div>
                         <i className="fa fa-map-marker"/>
                         <p>St Cyr en Val, Loiret, France</p>
@@ -52,7 +47,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <i className="fa fa-envelope"/>
-                        <p><a href="mailto:support@company.com">bouboumael@gmail.com</a></p>
+                        <p><a href={"/contact"}>Contactez moi</a></p>
                     </div>
                 </div>
             </div>

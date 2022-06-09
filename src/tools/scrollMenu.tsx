@@ -1,8 +1,13 @@
 export let prevScrollpos = window.scrollY;
 
 window.onload = () => {
+    const navbar: HTMLElement|null = document.querySelector('.navbar');
+    if (navbar) {
+        navbar.onclick = () => {
+            navbar.classList.remove('nav-hidden')
+        }
+    }
     window.addEventListener('scroll', () => {
-        const navbar: HTMLElement|null = document.querySelector('.navbar');
         let currentScrollPos = window.scrollY;
         if (navbar) {
             if (prevScrollpos < currentScrollPos) {
