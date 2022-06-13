@@ -10,7 +10,6 @@ const Contact = () => {
         <div className={'contact'}>
             <Helmet>
                 <title>Maël Chariault</title>
-                <script src={"https://kit.fontawesome.com/365f79b953.js"} crossOrigin="anonymous"></script>
             </Helmet>
             <Layout>
                 <div id="contact" className={'flex flex-col justify-center items-center py-24'}>

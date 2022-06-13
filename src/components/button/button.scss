@@ -1,0 +1,10 @@
+@import "../../assets/styles/variables.scss";
+
+.btn-form {
+	background-color: $secondary-color;
+	
+	&:hover {
+		background-color: $primary-color;
+		
+	}
+}

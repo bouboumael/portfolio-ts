@@ -42,3 +42,8 @@ export type ViolationList = {
     subject?: string,
     message?: string,
 }
+
+export type ButtonProps = {
+    label: string,
+    href?: string,
+}

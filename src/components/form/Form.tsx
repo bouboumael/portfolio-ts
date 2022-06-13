@@ -4,6 +4,7 @@ import {ContactPost} from "../../datas/contact";
 import {UcFirst} from "../../tools/ucFirst";
 import {Violation} from "../../types/portfolioInterface";
 import "./form.scss"
+import Button from "../button/Button";
 
 const Form = () => {
 
@@ -151,11 +152,9 @@ const Form = () => {
                         {errors.message ? <p className="text-red-500 text-xs italic">{errors.message}</p> : null}
                     </div>
                 </div>
-                <div className="flex flex-wrap mb-6">
+                <div className="flex flex-wrap mb-6 float-right">
                     <div className="w-full px-3 mb-6 md:mb-0">
-                        <button className="float-right text-white font-bold py-2 px-4 rounded btn-form">
-                            Envoyer
-                        </button>
+                        <Button label={'Envoyer'} />
                     </div>
                 </div>
             </form>
